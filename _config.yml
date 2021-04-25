@@ -20,7 +20,7 @@ title                    : "초보개발자의 도서관"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Jinseok Moon"
-description              : "딥러닝만 하고 개발지식을 안쌓은 초보 개발자"
+description              : "딥러닝을 공부하는 초보 개발자"
 url                      : "https://jinseokm.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -30,9 +30,9 @@ masthead_title           : # overrides the website title displayed in the masthe
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  provider               : "disqus"
   disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : "https-jinseokm-github-io"
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -277,8 +277,8 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
-      share: true
+      comments: true
+      share: false
       related: true
         
   # _pages
@@ -290,5 +290,5 @@ defaults:
       author_profile: true
       read_time: false
       comments: false
-      share: true
+      share: false
       related: false
