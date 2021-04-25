@@ -2,6 +2,7 @@
 title: "About me"
 permalink: /about/
 layout: single
+share: false
 ---
 
 ## Who is Jinseok Moon?
