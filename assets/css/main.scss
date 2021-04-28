@@ -7,4 +7,25 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap");
+
+// figcaption {
+//     font-family: 'Nanum Gothic';
+//   }
+body {
+    line-height: 1.6;
+}
+figure {
+    display: inline-block;
+    margin: 0px; /* adjust as needed */
+}
+
+figure img {
+    vertical-align: top;
+}
+figure figcaption {
+    text-align: center;
+    margin-top: -1em;
+    font-family: 'Nanum Gothic';
+}
