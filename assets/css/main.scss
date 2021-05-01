@@ -8,13 +8,23 @@
 @import "minimal-mistakes"; // main partials
 
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
-// @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap");
 
-// figcaption {
-//     font-family: 'Nanum Gothic';
-//   }
+@font-face {
+    font-family: "D2Coding";
+    src: url("/assets/fonts/D2Coding-Ver1.3.2-20180524.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "D2Coding";
+    src: url("/assets/fonts/D2CodingBold-Ver1.3.2-20180524.ttf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 body {
-    line-height: 1.6;
+    line-height: 1.7;
 }
 figure {
     display: inline-block;
@@ -25,7 +35,7 @@ figure img {
     vertical-align: top;
 }
 figure figcaption {
+    font-size: 0.9em;
     text-align: center;
     margin-top: -1em;
-    font-family: 'Nanum Gothic';
 }
