@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jinseokm.github.io/sitemap.xml
