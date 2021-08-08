@@ -23,7 +23,7 @@ name                     : "Jinseok Moon"
 description              : "딥러닝을 공부하는 초보 개발자"
 url                      : "https://jinseokm.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "https://jinseokm.github.io"
+repository               : "jinseokm/jinseokm.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
