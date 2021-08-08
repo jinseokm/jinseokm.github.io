@@ -1,11 +1,12 @@
 ---
-title: "About me"
+title: "Jinseok Moon"
 permalink: /about/
 layout: single
 toc: true
 toc_sticky: true
 toc_label: "On this page"
 share: false
+sidebar_main: true
 ---
 
 
@@ -22,10 +23,10 @@ share: false
 
 ## Skills & Abilities
 ### Programming Languages
-C/C++ (OOP), Parallel Programming (CUDA C, OpenMP), python (pytorch, keras, tensorflow)
+C/C++, Parallel Programming (CUDA C, OpenMP), python (pytorch, keras, tensorflow)
 
 ### Software 
-LaTeX(?), Powerpoint
+LaTeX(?), Git
 
 ## Thesis
 ### Master of Science in Informatics
