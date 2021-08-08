@@ -1,7 +1,7 @@
 ---
 title: "Others"
 layout: archive
-permalink: categories/others
+permalink: categories/Others
 author_profile: true
 sidebar_main: true
 ---
