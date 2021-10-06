@@ -11,6 +11,10 @@
 <html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
   <head>
     {% include head.html %}
+    
+    {% if page.use_math %}
+    {% include Mathjax.html %}
+    {% endif %}
     {% include head/custom.html %}
     <style> 
         ::-webkit-scrollbar{width: 16px;}

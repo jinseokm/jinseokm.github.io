@@ -12,15 +12,15 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "초보개발자의 도서관"
+title                    : "잡다하게 모아둔 도서관"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Jinseok Moon"
-description              : "딥러닝을 공부하는 초보 개발자"
+description              : "딥러닝을 공부하는 곳"
 url                      : "https://jinseokm.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "jinseokm/jinseokm.github.io"
