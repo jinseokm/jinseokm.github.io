@@ -21,9 +21,9 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Jinseok Moon"
 description              : "딥러닝을 주로 공부하는 곳"
-url                      : "https://jinseokm.github.io"
+url                      : "https://jinseok-moon.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "jinseokm/jinseokm.github.io"
+repository               : "jinseok-moon/jinseok-moon.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -32,7 +32,7 @@ words_per_minute         : 200
 comments:
   provider               : "utterances"
   disqus:
-    shortname            : # "https-jinseokm-github-io"
+    shortname            : # "https-jinseok-moon-github-io"
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -98,11 +98,11 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "HCI, DL, ML 전공"
   location         : "South Korea"
-  email            : "jinseokm38@gmail.com"
+  email            : "jsmoon.dev@gmail.com"
   links:
     # - label: "Email"
     #   icon: "fas fa-fw fa-envelope-square"
-    #   url: "mailto:jinseokm38@email.com"
+    #   url: "mailto:jsmoon.dev@email.com"
     # - label: "Website"
     #   icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -114,7 +114,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/jinseokm"
+      url: "https://github.com/jinseok-moon"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -129,7 +129,7 @@ footer:
     #   icon: "fab fa-fw fa-facebook-square"
       # url:
     - label: "GitHub"
-      icon: "https://github.com/jinseokm"
+      icon: "https://github.com/jinseok-moon"
       # url:
     # - label: "GitLab"
     #   icon: "fab fa-fw fa-gitlab"
