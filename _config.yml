@@ -97,7 +97,7 @@ author:
   name             : "Jinseok Moon"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "HCI, DL, ML 전공"
-  location         : "South Korea"
+  # location         : "South Korea"
   email            : "jsmoon.dev@gmail.com"
   links:
     # - label: "Email"
