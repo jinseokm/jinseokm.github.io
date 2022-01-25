@@ -29,16 +29,15 @@ layout: archive
   </section>
 {% endfor %}
 
-{% if page.comments %}
-    <script src="https://utteranc.es/client.js"
+<script src="https://utteranc.es/client.js"
         repo="jinseok-moon/blog-comments"
         issue-term="pathname"
         theme="github-dark"
         crossorigin="anonymous"
         async>
 </script>
-{% endif %}
 <!--
+{% if page.comments %}
 <div id="disqus_thread"></div>
 <script>
     /**
