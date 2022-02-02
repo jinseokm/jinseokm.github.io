@@ -12,27 +12,27 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "dark" # "default"  "air", "aqua", "contrast", , "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "ko-KR"
 title                    : "도서관"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Jinseok Moon"
-description              : "딥러닝을 주로 공부하는 곳"
+description              : "지식을 쌓아올리는 도서관"
 url                      : "https://jinseok-moon.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "jinseok-moon/blog-comments"
+repository               : "jinseok-moon/blog-comments" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
+breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : "utterances"
+  provider               : "utterances" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
-    shortname            : # "https-jinseok-moon-github-io"
+    shortname            : #"ansohxxn-github-io" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -41,8 +41,8 @@ comments:
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
   utterances:
-    theme                : "github-dark"
-    issue_term           : "pathname"
+    theme                : "photon-dark" # "github-light" (default), "github-dark"
+    issue_term           : "pathname" # "pathname" (default)
   staticman:
     branch               : # "master"
     endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
@@ -51,10 +51,9 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-  hide                   : # true, false (default)
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
+search                   : false # true, false (default)
+search_full_content      : false # true, false (default)
+search_provider          : #lunr # lunr (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
@@ -76,7 +75,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
+og_image                 :  # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -96,49 +95,54 @@ analytics:
 author:
   name             : "Jinseok Moon"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "HCI, DL, ML 전공"
+  bio              : "HCI, DL, ML 전공에 열심히 공부하는 사람입니다."
   # location         : "South Korea"
-  email            : "jsmoon.dev@gmail.com"
   links:
-    # - label: "Email"
-    #   icon: "fas fa-fw fa-envelope-square"
-    #   url: "mailto:jsmoon.dev@email.com"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:jsmoon.dev@gmail.com"
     - label: "About Me"
       icon: "fas fa-fw fa-link"
       url: "https://married-laborer-4ed.notion.site/This-is-why-we-call-programming-Language-7ccbcefa37944135a3484cb2083f6bb1"
-    # - label: "Twitter"
-    #   icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    # - label: "Facebook"
-    #   icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/jinseok-moon"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+    #- label: "Instagram"
+    #  icon: "fab fa-fw fa-instagram"
+    #  url: "https://instagram.com/06.25ash"
+    #- label: "Website"
+    #  icon: "fas fa-fw fa-link"
+      # url: "https://your-website.com"
+    #- label: "Twitter"
+    #  icon: "fab fa-fw fa-twitter-square"
+      # url: "https://twitter.com/"
+    #- label: "Facebook"
+    #  icon: "fab fa-fw fa-facebook-square"
+      # url: "https://facebook.com/"
+    
 
 # Site Footer
 footer:
   links:
-    # - label: "Twitter"
-    #   icon: "fab fa-fw fa-twitter-square"
-      # url:
-    # - label: "Facebook"
-    #   icon: "fab fa-fw fa-facebook-square"
-      # url:
     - label: "GitHub"
-      icon: "https://github.com/jinseok-moon"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/jinseok-moon"
+    #- label: "Twitter"
+    #  icon: "fab fa-fw fa-twitter-square"
       # url:
-    # - label: "GitLab"
-    #   icon: "fab fa-fw fa-gitlab"
-    #   # url:
-    # - label: "Bitbucket"
-    #   icon: "fab fa-fw fa-bitbucket"
+    #- label: "Facebook"
+    #  icon: "fab fa-fw fa-facebook-square"
       # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
+    
+      # url:
+    #- label: "GitLab"
+    #  icon: "fab fa-fw fa-gitlab"
+      # url:
+    #- label: "Bitbucket"
+    #  icon: "fab fa-fw fa-bitbucket"
+      # url:
+    #- label: "Instagram"
+    #  icon: "fab fa-fw fa-instagram"
       # url:
 
 
@@ -290,9 +294,10 @@ defaults:
       comments: true
       share: false
       related: true
+      mathjax: true
       sidebar_main: true
-      
-  # _pages
+
+    # _pages
   - scope:
       path: ""
       type: pages

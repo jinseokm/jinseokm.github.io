@@ -7,19 +7,11 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
-
+// "Cafe24Oneprettynight"
 @font-face {
-    font-family: "D2Coding";
-    src: url("/assets/fonts/D2Coding-Ver1.3.2-20180524.ttf") format('truetype');
+    font-family: 'Cafe24Oneprettynight';
+    src: local('Cafe24Oneprettynight'), url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
     font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "D2Coding";
-    src: url("/assets/fonts/D2CodingBold-Ver1.3.2-20180524.ttf") format('truetype');
-    font-weight: bold;
     font-style: normal;
 }
 
@@ -32,7 +24,7 @@ figure {
 }
 
 figure img {
-    vertical-align: top;
+    vertical-align: middle;
 }
 figure figcaption {
     font-size: 0.9em;
