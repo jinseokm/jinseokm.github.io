@@ -94,16 +94,16 @@ analytics:
 # Site Author
 author:
   name             : "Jinseok Moon"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "HCI, DL, ML 전공에 열심히 공부하는 사람입니다."
+  avatar           : "/assets/images/biophoto.jpg"
+  bio              : "공부한 내용 하나씩 차곡차곡"
   # location         : "South Korea"
   links:
+    - label: "Resume (Link)"
+      icon: "fas fa-fw fa-link"
+      url: "https://married-laborer-4ed.notion.site/This-is-why-we-call-programming-Language-7ccbcefa37944135a3484cb2083f6bb1"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:jsmoon.dev@gmail.com"
-    - label: "About Me"
-      icon: "fas fa-fw fa-link"
-      url: "https://married-laborer-4ed.notion.site/This-is-why-we-call-programming-Language-7ccbcefa37944135a3484cb2083f6bb1"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/jinseok-moon"

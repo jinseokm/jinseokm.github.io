@@ -1,5 +1,5 @@
 ---
-title: "Traditional Machine Learning"
+title: "Machine Learning"
 layout: archive
 permalink: categories/machine-learning
 author_profile: true
