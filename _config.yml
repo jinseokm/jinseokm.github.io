@@ -98,7 +98,7 @@ author:
   bio              : "공부한 내용 하나씩 차곡차곡"
   # location         : "South Korea"
   links:
-    - label: "Resume (Link)"
+    - label: "About me (Link)"
       icon: "fas fa-fw fa-link"
       url: "https://bit.ly/3I2gZLg"
     - label: "Email"
