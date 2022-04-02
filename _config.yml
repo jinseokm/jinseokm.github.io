@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Jinseok Moon"
-  avatar           : "/assets/images/biophoto.jpg"
+  # avatar           : "/assets/images/biophoto.jpg"
   bio              : "공부한 내용 하나씩 차곡차곡"
   # location         : "South Korea"
   links:
