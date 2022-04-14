@@ -18,7 +18,7 @@ last_modified_at: 2022-04-14
 DeepMind에서는 Graph와 Particle-based Simulation을 결합한 `Graph Network-based Simulators (GNS)` 를 제안했다. Learning to Simulate를 이용해서 시뮬레이션을 모사하면 다음과 같이 유사하게 예측을 할 수 있다.
 
 <center>
-<figure> <img src="/Images/Study/learning_to_simulate/water_ramps_rollout.gif" alt="Learning to Simulate Example"/>
+<figure style="width: 70%"> <img src="/Images/Study/learning_to_simulate/water_ramps_rollout.gif" alt="Learning to Simulate Example"/>
 <figcaption>Learning to Simulate 모델 예시</figcaption>
 </figure>
 </center>
@@ -31,7 +31,7 @@ DeepMind에서는 Graph와 Particle-based Simulation을 결합한 `Graph Network
 <figcaption>점과 선으로 이루어진 그래프</figcaption>
 </figure>
 
-<figure> <img src="/Images/Study/learning_to_simulate/relations.jpg" alt="Relation Networks"/>
+<figure style="width: 60%"> <img src="/Images/Study/learning_to_simulate/relations.jpg" alt="Relation Networks"/>
 <figcaption>인간 관계도. Image by <a href="https://pixabay.com/users/gdj-1086657/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3846597">Gordon Johnson</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3846597">Pixabay</a></figcaption>
 </figure>
 </center>
@@ -40,7 +40,7 @@ DeepMind에서는 Graph와 Particle-based Simulation을 결합한 `Graph Network
 GNN은 2009년에 제안된 기법(Scarselli et al., 2009)으로, 노드와 노드 사이의 관계, 엣지의 가중치 들을 고려하여 그래프로 네트워크를 구성하는 방법이다. 
 
 <center>
-<figure> <img src="/Images/Study/learning_to_simulate/gnn.png" alt="GNN"/>
+<figure style="width: 60%"> <img src="/Images/Study/learning_to_simulate/gnn.png" alt="GNN"/>
 <figcaption>Graph Neural Network (Scarselli et al., 2009) </figcaption>
 </figure>
 </center>
@@ -58,7 +58,7 @@ Graph Networks 는 DeepMind에서 제작한 python, tf 기반 GNN 라이브러�
 아래 그림과 같은 그래프가 있을때, `[Sender, Receiver]` 는 `[[0,0], [0,1], [1,0], [1,0]]` 와 같은 식으로 구성되어 있다. 이 때, 각 원소의 인덱스는 엣지의 인덱스를 나타낸다.
 
 <center>
-<figure style="width: 50%"> <img src="/Images/Study/learning_to_simulate/graph-example.jpg" alt="Graph Example"/>
+<figure style="width: 60%"> <img src="/Images/Study/learning_to_simulate/graph-example.jpg" alt="Graph Example"/>
 <figcaption>Graph Example</figcaption>
 </figure>
 </center>
@@ -66,7 +66,7 @@ Graph Networks 는 DeepMind에서 제작한 python, tf 기반 GNN 라이브러�
 입출력 네트워크를 구성하는 여러가지 방법이 있다. 
 
 <center>
-<figure style="width: 80%"> <img src="/Images/Study/learning_to_simulate/modules.jpg" alt="Graph Example"/>
+<figure style="width: 60%"> <img src="/Images/Study/learning_to_simulate/modules.jpg" alt="Graph Example"/>
 <figcaption>Graph Networks Modules</figcaption>
 </figure>
 </center>
