@@ -31,8 +31,8 @@ DeepMind에서는 Graph와 Particle-based Simulation을 결합한 `Graph Network
 <figcaption>점과 선으로 이루어진 그래프</figcaption>
 </figure>
 
-<figure style="width: 80%"> <img src="/Images/Study/learning_to_simulate/relations.jpg" alt="Relation Networks"/>
-<figcaption>인간 관게도</figcaption>
+<figure> <img src="/Images/Study/learning_to_simulate/relations.jpg" alt="Relation Networks"/>
+<figcaption>인간 관계도. Image by <a href="https://pixabay.com/users/gdj-1086657/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3846597">Gordon Johnson</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3846597">Pixabay</a></figcaption>
 </figure>
 </center>
 
@@ -40,8 +40,8 @@ DeepMind에서는 Graph와 Particle-based Simulation을 결합한 `Graph Network
 GNN은 2009년에 제안된 기법(Scarselli et al., 2009)으로, 노드와 노드 사이의 관계, 엣지의 가중치 들을 고려하여 그래프로 네트워크를 구성하는 방법이다. 
 
 <center>
-<figure style="width: 90%"> <img src="/Images/Study/learning_to_simulate/gnn.png" alt="GNN"/>
-<figcaption>Graph Neural Network</figcaption>
+<figure> <img src="/Images/Study/learning_to_simulate/gnn.png" alt="GNN"/>
+<figcaption>Graph Neural Network (Scarselli et al., 2009) </figcaption>
 </figure>
 </center>
 
@@ -251,3 +251,9 @@ def _compute_connectivity(positions, radius, add_self_edges):
 ```
 
 논문에서는 이 부분이 CPU에서 수행되고, 전체 플로우에서 큰 부분을 차지하여, 성능이 떨어진다고 언급했다. 실제로 Water-3D 케이스의 시뮬레이션 1 iteration에 Simulator는 0.104s, GNS의 경우 0.358s로, Simulator 대비 345% 의 속도를 얻었다고 한다. 여기서 주변입자 탐색을 제외한 Simulation에 수행된 시간은 0.071s로 19.8%였다. 이는 주변입자탐색 알고리즘을 고도화/최적화 하면 더욱 빨라질 가능성이 있음을 의미한다.
+
+## References
+1. SCARSELLI, Franco, et al. The graph neural network model. IEEE transactions on neural networks, 2008, 20.1: 61-80.
+2. SANCHEZ-GONZALEZ, Alvaro, et al. Learning to simulate complex physics with graph networks. In: International Conference on Machine Learning. PMLR, 2020. p. 8459-8468.
+3. BATTAGLIA, Peter W., et al. Relational inductive biases, deep learning, and graph networks. arXiv preprint arXiv:1806.01261, 2018.
+4. BATTAGLIA, Peter, et al. Interaction networks for learning about objects, relations and physics. Advances in neural information processing systems, 2016, 29.
