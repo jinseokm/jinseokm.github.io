@@ -14,17 +14,24 @@ date: 2022-04-12
 last_modified_at: 2022-04-14
 ---
 
-# [Learning to Simulate Complex Physics with Graph Networks (ICML 2020)](https://arxiv.org/abs/2002.09405)
+## [Learning to Simulate Complex Physics with Graph Networks (ICML 2020)](https://arxiv.org/abs/2002.09405)
+DeepMind에서는 Graph와 Particle-based Simulation을 결합한 `Graph Network-based Simulators (GNS)` 를 제안했다. Learning to Simulate를 이용해서 시뮬레이션을 모사하면 다음과 같이 유사하게 예측을 할 수 있다.
+
+<center>
+<figure> <img src="/Images/Study/learning_to_simulate/water_ramps_rollout.gif" alt="Learning to Simulate Example"/>
+<figcaption>Learning to Simulate 모델 예시</figcaption>
+</figure>
+</center>
 
 ## Graph Neural Network (GNN)
 먼저, 그래프가 무엇인지 알아보자. 그래프는 점들과 그 점들을 잇는 선으로 이루어진 데이터 구조이다. 관계나 상호작용을 나타내는 데이터를 분석할 때 주로 쓰인다. 대표적인 예로는 페이스북 친구관계, 왓챠플레이(유튜브, 넷플릭스) 유저-영상 감상여부 등이 있다.
 
 <center>
-<figure style="width: 30%"> <img src="/images/Study/learning_to_simulate/graph.png" alt="Exmaple of Graph"/>
+<figure style="width: 30%"> <img src="/Images/Study/learning_to_simulate/graph.png" alt="Exmaple of Graph"/>
 <figcaption>점과 선으로 이루어진 그래프</figcaption>
 </figure>
 
-<figure style="width: 80%"> <img src="/images/Study/learning_to_simulate/relations.jpg" alt="Relation Networks"/>
+<figure style="width: 80%"> <img src="/Images/Study/learning_to_simulate/relations.jpg" alt="Relation Networks"/>
 <figcaption>인간 관게도</figcaption>
 </figure>
 </center>
@@ -33,7 +40,7 @@ last_modified_at: 2022-04-14
 GNN은 2009년에 제안된 기법(Scarselli et al., 2009)으로, 노드와 노드 사이의 관계, 엣지의 가중치 들을 고려하여 그래프로 네트워크를 구성하는 방법이다. 
 
 <center>
-<figure style="width: 90%"> <img src="/images/Study/learning_to_simulate/gnn.png" alt="GNN"/>
+<figure style="width: 90%"> <img src="/Images/Study/learning_to_simulate/gnn.png" alt="GNN"/>
 <figcaption>Graph Neural Network</figcaption>
 </figure>
 </center>
@@ -43,7 +50,7 @@ Graph Networks 는 DeepMind에서 제작한 python, tf 기반 GNN 라이브러�
 그래프를 입력받고 마찬가지로 그래프를 출력하는 구성이며 입력 그래프는 엣지(E), 노드(V), 그리고 전역 파라미터(u)로 구성되어있고, 출력 그래프는 입력 그래프와 같은 형태이나 각 파라미터들을 업데이트한 상태가 된다. 또한, 노드, 엣지, 글로벌에 더해 Sender/Reciever 자료형을 가지고 있다. 
 
 <center>
-<figure style="width: 80%"> <img src="/images/Study/learning_to_simulate/graphnets.jpg" alt="GNN"/>
+<figure style="width: 80%"> <img src="/Images/Study/learning_to_simulate/graphnets.jpg" alt="GNN"/>
 <figcaption>Graph Networks</figcaption>
 </figure>
 </center>
@@ -51,7 +58,7 @@ Graph Networks 는 DeepMind에서 제작한 python, tf 기반 GNN 라이브러�
 아래 그림과 같은 그래프가 있을때, `[Sender, Receiver]` 는 `[[0,0], [0,1], [1,0], [1,0]]` 와 같은 식으로 구성되어 있다. 이 때, 각 원소의 인덱스는 엣지의 인덱스를 나타낸다.
 
 <center>
-<figure style="width: 50%"> <img src="/images/Study/learning_to_simulate/graph-example.jpg" alt="Graph Example"/>
+<figure style="width: 50%"> <img src="/Images/Study/learning_to_simulate/graph-example.jpg" alt="Graph Example"/>
 <figcaption>Graph Example</figcaption>
 </figure>
 </center>
@@ -59,20 +66,12 @@ Graph Networks 는 DeepMind에서 제작한 python, tf 기반 GNN 라이브러�
 입출력 네트워크를 구성하는 여러가지 방법이 있다. 
 
 <center>
-<figure style="width: 80%"> <img src="/images/Study/learning_to_simulate/modules.jpg" alt="Graph Example"/>
+<figure style="width: 80%"> <img src="/Images/Study/learning_to_simulate/modules.jpg" alt="Graph Example"/>
 <figcaption>Graph Networks Modules</figcaption>
 </figure>
 </center>
 
-## Learning to Simulate 코드 뜯어보기
-DeepMind에서는 Graph와 Particle-based Simulation을 결합한 `Graph Network-based Simulators (GNS)` 를 제안했다. Learning to Simulate를 이용해서 시뮬레이션을 모사하면 다음과 같이 유사하게 예측을 할 수 있다.
-
-<center>
-<figure> <img src="/images/Study/learning_to_simulate/water_ramps_rollout.gif" alt="Learning to Simulate Example"/>
-<figcaption>Learning to Simulate 모델 예시</figcaption>
-</figure>
-</center>
-
+## Learning to Simulate 코드 리뷰
 [Github](https://github.com/deepmind/deepmind-research/tree/master/learning_to_simulate)에 소스코드를 오픈하여 공유하고 있다. 파일 구조는 다음과 같다.
 
 > - train.py: 전체적으로 학습/평가/시뮬레이션 모사를 담당
