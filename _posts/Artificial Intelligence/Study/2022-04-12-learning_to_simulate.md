@@ -144,6 +144,7 @@ class LearnedSimulator(snt.AbstractModule):
             [self._num_particle_types, particle_type_embedding_size],
             trainable=True, use_resource=True)
 ```
+
 위 코드의 LearnedSimulator 클래스는 멤버 변수로 `_graph_network` 를 갖는데, 이 변수는 Encoder - Processor - Decoder 로 구성되는 코어 네트워크를 정의한 `EncodeProcessDecode` 클래스이다. 클래스의 세부 네트워크는 다음과 같다.
 
 ```python
@@ -216,7 +217,15 @@ class EncodeProcessDecode(snt.AbstractModule):
             output_size=self._output_size)
 ```
 
-주변 입자 탐색에는 [scikit-learn의 K-D Tree 알고리즘](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KDTree.html)을 사용한다. 
+## Encoder
+각 입자들에 대한 Input $\mathbf{x}_i$는 다음과 같이 정의된다. $i$입자의 위치, 그리고 유한차분법으로 얻어지는 이전 5스텝의 속도 $\dot{\mathbf{p}}_i$, 그리고 입자가 boundary인지, 유체인지, 강체인지 등을 나타내는 입자의 속성 $\mathbf{f}_i$로 이루어져있다. 
+
+$$
+\mathbf{x}_i^{t_k} = [\mathbf{p}_i^{t_k}, \dot{\mathbf{p}}_i^{t_{k-C+1}}, ..., \dot{\mathbf{p}}_i^{t_{k}}, \mathbf{f}_i] \\
+\mathbf{r}_{i,j} = \left[ \left( \mathbf{p}_i-\mathbf{p}_j \right), \lVert \mathbf{p}_i-\mathbf{p}_j \rVert \right]
+$$
+
+Encoder에 입력할 그래프로 만들어주기 위해서 주변 입자 탐색 알고리즘을 적용한다. 알고리즘은 [scikit-learn의 K-D Tree 알고리즘](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KDTree.html)을 사용한다. 
 
 ```python
 # connectivity_utils.py
@@ -250,7 +259,26 @@ def _compute_connectivity(positions, radius, add_self_edges):
   return senders, receivers
 ```
 
-논문에서는 이 부분이 CPU에서 수행되고, 전체 플로우에서 큰 부분을 차지하여, 성능이 떨어진다고 언급했다. 실제로 Water-3D 케이스의 시뮬레이션 1 iteration에 Simulator는 0.104s, GNS의 경우 0.358s로, Simulator 대비 345% 의 속도를 얻었다고 한다. 여기서 주변입자 탐색을 제외한 Simulation에 수행된 시간은 0.071s로 19.8%였다. 이는 주변입자탐색 알고리즘을 고도화/최적화 하면 더욱 빨라질 가능성이 있음을 의미한다.
+그 다음, $\mathbf{x}_i, \mathbf{r}_{i,j}$ 를 이용하여 $\mathbf{v}_i, \mathbf{e}_{i,j}$ 그래프를 구성하고, 각 feature에 대해서는 normalization을 수행한다. 수식과 대략적인 개념은 아래와 같다.
+
+$$
+\mathbf{v}_i = \varepsilon^v(\mathbf{x}_i),\quad \mathbf{e}_{i,j} = \varepsilon^e(\mathbf{r}_{i,j})
+$$
+
+<center>
+<figure style="width: 60%"> <img src="/Images/Study/learning_to_simulate/in-graph.jpg" alt="Graph Example"/>
+<figcaption>Data Input to Encoder Graph</figcaption>
+</figure>
+</center>
+
+## Processor
+Processor 부분의 네트워크는 노드와 엣지의 네트워크를 Interaction Network (Battaglia et al., 2016) 로 구성하고, `_num_message_passing_steps` 만큼의 네트워크를 구축한다.
+
+## Decoder
+Decoder 에서는 encoder와는 반대로, 그래프로부터 $\mathbf{x}_i^{t_{k+1}}$을 출력하여, 결과적으로 다음 스텝에서의 입자들의 위치를 예측하는 모델로써 작동한다.
+
+논문에서는 이러한 네트워크에서, `주변입자탐색` 부분이 CPU에서 수행되고, 전체 플로우에서 큰 부분을 차지하여, 성능이 떨어진다고 언급했다. 실제로 Water-3D 케이스의 시뮬레이션 1 iteration에 Simulator는 0.104s, GNS의 경우 0.358s로, Simulator 대비 345% 의 속도를 얻었다고 한다. 여기서 주변입자 탐색을 제외한 Simulation에 수행된 시간은 0.071s로 19.8%였다. 이는 주변입자탐색 알고리즘을 고도화/최적화 하면 더욱 빨라질 가능성이 있음을 의미한다.
+
 
 ## References
 1. SCARSELLI, Franco, et al. The graph neural network model. IEEE transactions on neural networks, 2008, 20.1: 61-80.
