@@ -3,7 +3,7 @@ title: "Learning to Simulate Complex Physics with Graph Networks"
 excerpt: "Learning to Simulate"
 categories:
   - Study
-tags: [GNN, Deep Learning, Physics]
+tags: [GNN, Neural Network, Physics, Paper]
 toc: true
 toc_sticky: true
 toc_label: "On this page"
@@ -11,7 +11,7 @@ published: true
 use_math: true
 
 date: 2022-04-12
-last_modified_at: 2022-04-14
+last_modified_at: 2022-04-16
 ---
 
 ## [Learning to Simulate Complex Physics with Graph Networks (ICML 2020)](https://arxiv.org/abs/2002.09405)
