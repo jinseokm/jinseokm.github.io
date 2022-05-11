@@ -1,0 +1,74 @@
+---
+title: "BOJ 14891 톱니바퀴 (작성중)"
+excerpt: "BaekJoon Online Judge 14891"
+categories:
+  - Algorithms
+tags: [Python, Algorithms, BOJ]
+toc: false
+toc_sticky: true
+toc_label: "On this page"
+published: true
+use_math: true
+
+date: 2022-05-11
+last_modified_at: 2022-05-11
+---
+
+
+## [14891 톱니바퀴](https://www.acmicpc.net/problem/14891)
+톱니바퀴 네개를 회전시키는 문제. 각 톱니바퀴는 8개의 이빨을 가지고 있고, N/S 극을 가지고 있다.
+입력받은 톱니를 돌렸을때, 옆 톱니의 맞닿은 부분이 다른 극이면 옆 톱니바퀴는 `반대방향` 으로 회전시킨다.
+
+재귀함수로 구현했는데, 맨 처음 회전시키는 톱니는 왼쪽과 오른쪽 모두 신경써야 하지만, 그 이후의 톱니는 한쪽 방향만 신경쓰는 것을 생각한다.
+그렇지 않으면 무한동력을 얻게 된다.
+
+코드는 아래와 같다.
+
+```python
+TURNCLOCK = 1
+TURNCOUNTER = -1
+
+RIGHT = 2
+LEFT = 6
+
+
+def turn(gear, direction):
+    if direction == TURNCLOCK:
+        gear.insert(0, gear.pop())
+    else:
+        gear.append(gear.pop(0))
+
+
+def affected(gears, num, side, direction):
+    if side == 1 and num < 3:
+        if gears[num][RIGHT] != gears[num+1][LEFT]:
+            affected(gears, num+1, side, -direction)
+
+    elif side == -1 and num > 0:
+        if gears[num][LEFT] != gears[num-1][RIGHT]:
+            affected(gears, num-1, side, -direction)
+    turn(gears[num], direction)
+
+
+gears = []
+for n in range(4):
+    gears.append(list(map(int, list(input()))))
+
+k = int(input())
+
+for _ in range(k):
+    num, cl = map(int, input().split())
+    num = num - 1
+    if num > 0 and gears[num][LEFT] != gears[num-1][RIGHT]:
+        affected(gears, num-1, -1, -cl)
+    if num < 3 and gears[num][RIGHT] != gears[num+1][LEFT]:
+        affected(gears, num+1, 1, -cl)
+
+    turn(gears[num], cl)
+
+score = 0
+for n, g in enumerate(gears):
+    score += (1 << n) * g[0]
+
+print(score)
+```
