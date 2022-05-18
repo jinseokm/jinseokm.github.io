@@ -12,7 +12,7 @@
   max-width: 100%;
   padding-left: 1em;
   padding-right: 1em;
-  font-family: $sans-serif;
+  font-family: $cute;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.3s;
@@ -25,8 +25,8 @@
   ol {
     padding: 0;
     list-style: none;
-    font-size: $type-size-6;
-
+    font-size: $type-size-5;
+    margin-bottom:0;
     @include breakpoint($large) {
       float: right;
       width: calc(100% - #{$right-sidebar-width-narrow});
@@ -42,7 +42,7 @@
   }
 
   .current {
-    font-weight: bold;
+    font-weight: normal;
   }
 }
 
@@ -131,7 +131,7 @@
     padding: 1em 2em;
     //float: left;
     width: 100%;
-    font-family: $sans-serif;
+    font-family: $cute;
     font-size: $type-size-5;
     font-weight: bold;
     text-align: center;
@@ -141,8 +141,8 @@
     border-radius: $border-radius;
 
     .prev_next {
-      font-family: $cute;
-      color:#a1a7fa;
+    font-family: $cute;
+    color:#a1a7fa;
     }
 
     &:hover {
@@ -546,9 +546,11 @@
   box-shadow: $box-shadow;
 
   .nav__title {
-    color: #fff;
-    font-size: $type-size-5;
-    background: mix(#fff,$primary-color,10%);
+    color: $text-color;
+    font-weight: normal;
+    font-family: $cute;
+    font-size: $type-size-4;
+    background: mix(#000,$primary-color,50%);//  mix(#fff,$primary-color,10%);
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
   }
@@ -565,7 +567,6 @@
   width: 100%;
   list-style: none;
   font-size: $type-size-4;
-
   @include breakpoint($large) {
     font-size: $type-size-5;
   }
@@ -574,7 +575,7 @@
     display: block;
     padding: 0.25rem 0.75rem;
     color: $muted-text-color;
-    font-weight: bold;
+    // font-weight: bold;
     line-height: 1.5;
     border-bottom: 1px solid $border-color;
 
