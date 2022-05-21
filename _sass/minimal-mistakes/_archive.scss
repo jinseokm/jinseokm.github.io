@@ -3,7 +3,6 @@
    ========================================================================== */
 
 .archive {
-  margin-top: 1em;
   margin-bottom: 2em;
 
   @include breakpoint($large) {
@@ -45,8 +44,8 @@
 }
 
 .archive__item-title {
-  margin-bottom: 0.9em;
-  font-family: $sans-serif-narrow;
+  margin-bottom: 0.2em;
+  font-family: $cute;
   line-height: 1.5;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -123,6 +122,9 @@
   }
 }
 
+.archive__small{
+    font-size: 0.9em;
+}
 /*
    List view
    ========================================================================== */
