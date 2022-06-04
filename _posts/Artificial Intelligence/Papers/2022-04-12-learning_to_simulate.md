@@ -1,9 +1,8 @@
 ---
 title: "Learning to Simulate Complex Physics with Graph Networks"
-excerpt: "Learning to Simulate"
 categories:
   - Papers
-tags: [GNN, Neural Network, Physics]
+tags: [GNN, Physics]
 toc: true
 toc_sticky: true
 toc_label: "On this page"
