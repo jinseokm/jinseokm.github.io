@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "dark" # "default"  "air", "aqua", "contrast", , "dir
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "달밤 도서관🌙📚"
+title                    : "매일매일 레벨업"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Jinseok Moon"
-description              : "지식을 쌓아올리는 도서관"
+description              : "지식을 쌓아올리는 중"
 url                      : "https://jinseok-moon.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "jinseok-moon/blog-comments" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "Jinseok Moon"
   # avatar           : "/assets/images/biophoto.jpg"
-  bio              : "어제보다 조금 더 똑똑한 오늘"
+  bio              : "어제보다 조금 더 똑똑한 사람이 되는 중"
   # location         : "South Korea"
   links:
     - label: "About me (Link)"
