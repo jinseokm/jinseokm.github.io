@@ -90,7 +90,6 @@ analytics:
     tracking_id          : "G-VYT2J24KW9"
     anonymize_ip         : # true, false (default)
 
-
 # Site Author
 author:
   name             : "Jinseok Moon"
@@ -98,12 +97,12 @@ author:
   bio              : "어제보다 조금 더 똑똑한 사람이 되는 중"
   # location         : "South Korea"
   links:
-    - label: "About me (Link)"
-      icon: "fas fa-fw fa-link"
-      url: "https://bit.ly/3I2gZLg"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:jsmoon.dev@gmail.com"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "www.linkedin.com/in/jinseok-moon"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/jinseok-moon"
@@ -127,6 +126,9 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/jinseok-moon"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "www.linkedin.com/in/jinseok-moon"
     #- label: "Twitter"
     #  icon: "fab fa-fw fa-twitter-square"
       # url:
