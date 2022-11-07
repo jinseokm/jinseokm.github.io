@@ -13,8 +13,8 @@ date: 2022-04-12
 last_modified_at: 2022-04-16
 ---
 
-# [Learning to Simulate Complex Physics with Graph Networks (ICML 2020)](https://arxiv.org/abs/2002.09405)
-DeepMind 에서는 Graph 와 Particle-based Simulation 을 결합한 `Graph Network-based Simulators (GNS)` 를 제안했습니다. 그들이 제안한 Learning to Simulate 모델을 이용해서 시뮬레이션을 모사하면 다음과 같이 유체의 흐름을 모사할 수 있습니다.
+# Brief Summary
+IMCL'20 에 발표된 논문으로, DeepMind 에서 Graph 와 Particle-based Simulation 을 결합한 `Graph Network-based Simulators (GNS)` 를 제안했습니다. 그들이 제안한 Learning to Simulate 모델을 이용해서 시뮬레이션을 모사하면 다음과 같이 유체의 흐름을 모사할 수 있습니다.
 
 <center>
 <figure style="width: 70%"> <img src="/Images/Study/learning_to_simulate/water_ramps_rollout.gif" alt="Learning to Simulate Example"/>

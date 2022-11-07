@@ -13,9 +13,8 @@ use_math: true
 date: 2022-06-01
 last_modified_at: 2022-06-28
 ---
-
-# [Learning Strides in Convolutional Nerual Networks (ICLR 2022)](https://openreview.net/pdf?id=M752z9FKJP)
-구글 리서치 팀에서 수행한 연구로, ICLR 2022에서 Outstanding Paper Awards를 받은 논문입니다. 간략하게 내용을 요약해보자면, 'feature의 downnsampling을 spatial domain이 아닌 spectral domain에서 수행하고, 그 stride를 미분가능한 함수로 정의하여 stride의 폭까지 학습할 수 있다' 라는 내용의 논문입니다.
+# Brief Summary
+구글 리서치 팀에서 수행한 연구로, ICLR'22 에서 Outstanding Paper Awards를 받은 논문입니다. 간략하게 내용을 요약해보자면, 'feature의 downnsampling을 spatial domain이 아닌 spectral domain에서 수행하고, 그 stride를 미분가능한 함수로 정의하여 stride의 폭까지 학습할 수 있다' 라는 내용의 논문입니다.
 
 ConvNet에서는 커널이 sliding window로 움직이며 주변과의 상호작용이 정의됩니다. 정의된 pattern 혹은 feature는 네트워크에 가중치를 가지면서 학습되고 결과적으로 MLP와 다르게 translation invariance 특성을 가질 수 있게 되었습니다. 
 ConvNet은 Spatial domain에서 얼마만큼의 정보를 한 묶음으로 볼 것인가? 라는 질문과 함께 parametric study 적인 많은 연구들이 수행되어 왔습니다. 
