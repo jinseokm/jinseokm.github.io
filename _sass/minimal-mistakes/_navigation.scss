@@ -136,17 +136,17 @@
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    color: $muted-text-color;
+    // color: $muted-text-color;
     border: 1px solid mix(#fff, $border-color, 60%);
     border-radius: $border-radius;
 
     .prev_next {
     font-family: $cute;
-    color:#a1a7fa;
+    color:#008f64;
     }
 
     &:hover {
-      @include yiq-contrasted($muted-text-color);
+      // @include yiq-contrasted($muted-text-color);
     }
 
     &:first-child {
@@ -471,7 +471,7 @@
     color: inherit;
     font-size: $type-size-3;
     font-family: $cute;
-    color: mix(#fff,$primary-color,80%);
+    // color: mix(#fff,$primary-color,10%);
 
     &:hover {
       text-decoration: underline;
@@ -550,7 +550,7 @@
     font-weight: normal;
     font-family: $cute;
     font-size: $type-size-4;
-    background: mix(#000,$primary-color,50%);//  mix(#fff,$primary-color,10%);
+    background: mix(#000, $background-color,5%);
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
   }

@@ -72,7 +72,6 @@ body {
   font-family: $cute;
   margin-top: 0;
   line-height: 1.2;
-  color: mix(#fff, $primary-color, 40%);
 
   & + .page__meta {
     margin-top: -0.5em;
@@ -348,7 +347,7 @@ body {
   text-decoration: none;
   border: 1px solid $background-color;
   border-radius: $border-radius;
-  background-color: mix(#fff, $background-color,5%);
+  background-color: mix(#000, $background-color,5%);
   font-family: $cute;
   font-size: $type-size-5;
   color: $primary-color;
@@ -367,7 +366,7 @@ body {
   text-decoration: none;
   border: 1px solid $background-color;
   border-radius: $border-radius;
-  background-color: mix(#fff, $background-color,5%);
+  background-color: mix(#000, $background-color,5%);
   font-family: $cute;
   font-size: $type-size-5;
   color: $primary-color;
