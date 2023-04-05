@@ -102,7 +102,7 @@ author:
       url: "mailto:jsmoon.dev@gmail.com"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "www.linkedin.com/in/jinseok-moon"
+      url: "https://www.linkedin.com/in/jinseok-moon"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/jinseok-moon"
