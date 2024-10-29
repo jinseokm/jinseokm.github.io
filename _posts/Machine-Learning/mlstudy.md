@@ -1,7 +1,7 @@
 ---
 title: "머신러닝 공부 모아보기"
 categories:
-  - Study
+  - Machine Learning
 tags: [AI, Pytorch, Machine Learning]
 toc: true
 toc_sticky: true

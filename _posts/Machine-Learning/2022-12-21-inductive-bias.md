@@ -1,7 +1,7 @@
 ---
 title: "Inductive Bias 에 대해서"
 categories:
-  - Study
+  - Machine Learning
 tags: [AI, Pytorch, Machine Learning, CNN]
 toc: true
 toc_sticky: true

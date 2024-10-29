@@ -1,7 +1,7 @@
 ---
 title: "CNN의 Translation Invariance에 대하여"
 categories:
-  - Study
+  - Machine Learning
 tags: [AI, Pytorch, Machine Learning, CNN]
 toc: true
 toc_sticky: true

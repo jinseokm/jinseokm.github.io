@@ -5,17 +5,23 @@
   <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
   <ul class="nav__items" id="category_tag_menu">
       <li>
-            📂 <span style="font-family:'Cafe24Oneprettynight';">전체 글 수</style> <span style="font-family:'Coming Soon';">{{sum}}</style> <span style="font-family:'Cafe24Oneprettynight';">개</style> 
-      </li>
-      <li>
        
-        <span class="nav__sub-title">Develop</span>
-            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
+        <span class="nav__sub-title">Categories</span>
             <ul>
                 <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
                 {% for category in site.categories %}
-                    {% if category[0] == "cpp" %}
-                        <li><a href="/categories/cpp" class="">C/C++ ({{category[1].size}})</a></li>
+                    {% if category[0] == "Parallel Programming" %}
+                        <li><a href="/categories/parallel-programming" class="">Parallel Programming ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+
+            <ul>
+                <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
+                <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
+                {% for category in site.categories %}
+                    {% if category[0] == "Machine Learning" %}
+                        <li><a href="/categories/machine-learning" class="">Machine Learning ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -23,8 +29,8 @@
             <ul>
                 <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
                 {% for category in site.categories %}
-                    {% if category[0] == "Parallel Programming" %}
-                        <li><a href="/categories/parallel-programming" class="">Parallel Programming ({{category[1].size}})</a></li>
+                    {% if category[0] == "cpp" %}
+                        <li><a href="/categories/cpp" class="">C/C++ ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -39,47 +45,20 @@
             </ul>
             
             <ul>
-                <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
-                <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
-                {% for category in site.categories %}
-                    {% if category[0] == "Others" %}
-                        <li><a href="/categories/Others" class="">Others ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-
-
-            <span class="nav__sub-title">Artificial Intelligence</span>
-            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
-            <ul>
-                <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
-                <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
-                {% for category in site.categories %}
-                    {% if category[0] == "Study" %}
-                        <li><a href="/categories/study" class="">Study ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
-                <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
                 {% for category in site.categories %}
                     {% if category[0] == "Papers" %}
                         <li><a href="/categories/Papers" class="">Papers ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
+        
             <ul>
-                <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
-                <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
                 {% for category in site.categories %}
-                    {% if category[0] == "Miscellaneous" %}
-                        <li><a href="/categories/Miscellaneous" class="">Miscellaneous ({{category[1].size}})</a></li>
+                    {% if category[0] == "Others" %}
+                        <li><a href="/categories/Others" class="">Others ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
-            
-        
 
         </li>
   </ul>

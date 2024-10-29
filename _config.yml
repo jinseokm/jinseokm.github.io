@@ -15,12 +15,12 @@
 minimal_mistakes_skin    : "default" # "default"  "air", "aqua", "contrast", , "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "ko-KR"
-title                    : "매일매일 레벨업"
+locale                   : "en-US"
+title                    : "Moon's Library"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Jinseok Moon"
-description              : "지식을 쌓아올리는 중"
+description              : # "지식을 쌓아올리는 중"
 url                      : "https://jinseok-moon.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "jinseok-moon/blog-comments" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -94,7 +94,7 @@ analytics:
 author:
   name             : "Jinseok Moon"
   # avatar           : "/assets/images/biophoto.jpg"
-  bio              : "어제보다 조금 더 똑똑한 사람이 되는 중"
+  bio              : "Be faithful everyday, be flexible in life"
   # location         : "South Korea"
   links:
     - label: "Email"
@@ -106,18 +106,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/jinseok-moon"
-    #- label: "Instagram"
-    #  icon: "fab fa-fw fa-instagram"
-    #  url: "https://instagram.com/06.25ash"
-    #- label: "Website"
-    #  icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    #- label: "Twitter"
-    #  icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    #- label: "Facebook"
-    #  icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
+    - label: "Blog (Korean)"
+      icon: "fas fa-fw fa-link"
+      url: "https://null-ptr.tistory.com/"
     
 
 # Site Footer
@@ -129,6 +120,9 @@ footer:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "www.linkedin.com/in/jinseok-moon"
+    - label: "Blog (Korean)"
+      icon: "fas fa-fw fa-link"
+      url: "https://null-ptr.tistory.com/"
     #- label: "Twitter"
     #  icon: "fab fa-fw fa-twitter-square"
       # url:
